@@ -491,7 +491,7 @@ public class ChordGenerator {
                 }
                 stringsCounts.add(currentCount);
             }
-            if (isFirstFretBarre) stringsSum -= shapeTreeMap.get(1).size() - 1;
+            if (isFirstFretBarre && shapeTreeMap.containsKey(1)) stringsSum -= shapeTreeMap.get(1).size() - 1;
             for (int i = 0; i < barreStrings.size(); i++) stringsSum -= 1;
             if (stringsSum < 4) {
                 int spaceIndex = stringsCounts.indexOf(0);
